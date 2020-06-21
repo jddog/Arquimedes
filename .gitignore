@@ -1,0 +1,20 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Arquimedes
+/Aplicaciones/Api/AQ.API/bin/Debug/netcoreapp2.1
+/Aplicaciones/Api/AQ.API/obj
+/AQ.Infraestructura/obj
+/Dominio/AQ.Dominio/bin/Debug/netcoreapp3.1
+/Dominio/AQ.Dominio/obj
+/Global/AQ.DTOs/bin/Debug/netcoreapp3.1
+/Global/AQ.DTOs/obj
+/Global/AQ.Global/bin/Debug/netcoreapp3.1
+/Global/AQ.Global/obj
+/Global/AQ.Utilidades/bin/Debug/netcoreapp3.1
+/Global/AQ.Utilidades/obj
+/Infraestructura/AQ.Infraestructura/bin/Debug/netcoreapp3.1
+/Infraestructura/AQ.Infraestructura/obj
+/ServiciosAplicacion/AQ.ServiciosAplicacion/bin/Debug/netcoreapp3.1
+/ServiciosAplicacion/AQ.ServiciosAplicacion/obj
