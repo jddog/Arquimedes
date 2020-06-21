@@ -1,0 +1,7 @@
+{
+  "name": "Arquimedes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
