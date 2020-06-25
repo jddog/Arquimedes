@@ -19,12 +19,12 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="5.2.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Api\Controllers\" />
-    <Folder Include="Api\Middleware\" />
     <Folder Include="App\" />
   </ItemGroup>
 

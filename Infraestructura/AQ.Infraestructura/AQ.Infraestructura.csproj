@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Global\AQ.Global\AQ.Global.csproj" />
+    <ProjectReference Include="..\..\Global\AQ.Utilidades\AQ.Utilidades.csproj" />
   </ItemGroup>
 
   <ItemGroup>
