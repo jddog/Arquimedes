@@ -1,24 +1,37 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AQ.Global;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AQ.Infraestructura.BD.Context
 {
-    public ContextoConfiguracion(HttpContextAccessor.HttpContext.Items["_cadenaConexion"].ToString())
-           : base(options)
+    public class ContextoBD : DbContext
     {
-    }
-    public ContextoConfiguracion(IConstruirSesion construirSesion)
-        : base(construirSesion.ObtenerContextOptions(new DbContextOptionsBuilder<ContextoConfiguracion>()))
-    {
-        if ((Database.GetService<IDatabaseCreator>() as RelationalDatabaseCreator).Exists())
+
+        //readonly IConfiguration configuration;
+
+        public ContextoBD()
+            : base(ObtenerContextOptions(new DbContextOptionsBuilder<ContextoBD>()))
         {
-            this.Database.Migrate();
+            if ((Database.GetService<IDatabaseCreator>() as RelationalDatabaseCreator).Exists())
+            {
+                this.Database.Migrate();
+            }
+            else
+            {
+                throw new Exception("No se ha creado la base de datos");
+            }
         }
-        else
+
+        private static DbContextOptions ObtenerContextOptions(DbContextOptionsBuilder builder)
         {
-            throw new Exception("No se ha creado la base de datos");
+            string cadenaConexion = "";//configuration.GetConnectionString("DevelopConnection");
+            builder.UseSqlServer(
+               cadenaConexion,
+               x => x.MigrationsHistoryTable(ConstantesBD.DBMigrationHistoryTable, ConstantesBD.DBSchemaConfiguration)
+           );
+            return builder.Options;
         }
     }
 }

@@ -21,3 +21,9 @@
 /Aplicaciones/Web/AQ.API/.vs/AQ/v16
 /Aplicaciones/Web/AQ.API/obj/Debug/netcoreapp2.1
 /Aplicaciones/Web/AQ.API/obj
+/Aplicaciones/Web/AQ.API/bin/Debug
+/Global/AQ.DTOs/bin/Debug/netcoreapp2.1
+/Global/AQ.Global/bin/Debug/netcoreapp2.1
+/Global/AQ.Utilidades/bin/Debug/netcoreapp2.1
+/Infraestructura/AQ.Infraestructura/bin/Debug/netcoreapp2.1
+/ServiciosAplicacion/AQ.ServiciosAplicacion/bin/Debug/netcoreapp2.1
